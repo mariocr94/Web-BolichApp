@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bolichapp.com/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/" />
+  </url>
+  <url>
+    <loc>https://bolichapp.com/en/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/" />
+  </url>
+  <url>
+    <loc>https://bolichapp.com/privacidad/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/privacidad/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/privacidad/" />
+  </url>
+  <url>
+    <loc>https://bolichapp.com/en/privacy/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/privacidad/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/privacy/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/privacidad/" />
+  </url>
+  <url>
+    <loc>https://bolichapp.com/terminos/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/terminos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/terminos/" />
+  </url>
+  <url>
+    <loc>https://bolichapp.com/en/terms/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/terminos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/terms/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/terminos/" />
+  </url>
+  <url>
+    <loc>https://bolichapp.com/borrar-cuenta/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/borrar-cuenta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/delete-account/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/borrar-cuenta/" />
+  </url>
+  <url>
+    <loc>https://bolichapp.com/en/delete-account/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/borrar-cuenta/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bolichapp.com/en/delete-account/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bolichapp.com/borrar-cuenta/" />
+  </url>
+</urlset>

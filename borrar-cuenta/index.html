@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es-MX">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Borrar tu cuenta · BolichApp</title>
+    <meta
+      name="description"
+      content="Cómo borrar tu cuenta y tus datos de BolichApp, desde la app o por correo."
+    />
+    <meta name="theme-color" content="#0E1116" />
+    <link rel="canonical" href="https://bolichapp.com/borrar-cuenta/" />
+    <link rel="alternate" hreflang="es-MX" href="https://bolichapp.com/borrar-cuenta/" />
+    <link rel="alternate" hreflang="en" href="https://bolichapp.com/en/delete-account/" />
+    <link rel="alternate" hreflang="x-default" href="https://bolichapp.com/borrar-cuenta/" />
+    <link rel="icon" href="/assets/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/assets/icon.png" />
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="/"
+          ><img src="/assets/icon.png" alt="" width="36" height="36" />BolichApp</a
+        >
+        <nav class="site-nav" aria-label="Principal">
+          <ul>
+            <li><a href="/privacidad/">Privacidad</a></li>
+            <li><a href="/terminos/">Términos</a></li>
+            <li>
+              <a class="lang" href="/en/delete-account/" hreflang="en" lang="en">English</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <div class="wrap">
+        <h1>Borrar tu cuenta y tus datos de BolichApp</h1>
+        <p class="lead">
+          BolichApp es una app de
+          <span class="todo">TODO: nombre del desarrollador (igual que en Google Play)</span>. Aquí
+          te explicamos cómo borrar tu cuenta y tus datos, qué se borra y qué se conserva.
+        </p>
+
+        <h2 id="app">Desde la app (recomendado)</h2>
+        <ol class="steps">
+          <li>Abre BolichApp.</li>
+          <li>Ve a <span class="path">Ajustes → Tus datos</span>.</li>
+          <li>Toca <span class="path">Borrar todos mis datos</span>.</li>
+          <li>Confirma con <span class="path">Borrar todo</span>.</li>
+        </ol>
+        <p>
+          El borrado es inmediato y no se puede deshacer. Si quieres conservar tus líneas, exporta
+          antes un respaldo desde la misma pantalla. Si no hay conexión, la app te ofrece borrar
+          solo lo que está en el teléfono; puedes repetir el proceso con internet para borrar
+          también tu usuario del servidor.
+        </p>
+
+        <h2 id="que-se-borra">Qué se borra</h2>
+        <ul>
+          <li>
+            <strong>En tu teléfono:</strong> tu perfil y alias, bolas, boliches, sesiones, líneas y
+            tiros, las fotos de marcador guardadas y los archivos de respaldo temporales de la app.
+          </li>
+          <li>
+            <strong>En nuestro servidor:</strong> tu usuario (anónimo o de Google) y cualquier
+            ajuste de cuota asociado.
+          </li>
+          <li>
+            <strong>Si iniciaste sesión con Google:</strong> tu correo, tu nombre y todos tus datos
+            sincronizados.
+            <span class="todo">TODO: confirmar al implementar la sincronización.</span>
+          </li>
+        </ul>
+
+        <h2 id="que-se-conserva">Qué se conserva</h2>
+        <ul>
+          <li>
+            <strong>Registro de uso de fotos, sin identificador.</strong> Por cada foto leída
+            conservamos fecha, resultado, modelo, tokens, costo estimado, tamaño de la imagen y
+            código de error, pero se desvincula de tu usuario al borrarlo, así que ya no se puede
+            asociar a nadie. Nunca contuvo imágenes, nombres ni alias. Lo usamos para la
+            contabilidad del gasto y el límite diario del servicio.
+            <span class="todo">TODO: plazo máximo de conservación (p. ej. 24 meses).</span>
+          </li>
+          <li>
+            <strong>Registros técnicos del servidor</strong> (sin imágenes ni nombres), que se
+            eliminan automáticamente.
+            <span class="todo">TODO: plazo según el plan de Supabase.</span>
+          </li>
+          <li>
+            <strong>Respaldos que tú exportaste</strong> y compartiste (por ejemplo, en WhatsApp o
+            Google Drive): están fuera de nuestro alcance; bórralos tú desde ese servicio.
+          </li>
+        </ul>
+        <p>
+          Nunca guardamos las fotos del marcador en el servidor, así que no hay fotos que borrar
+          ahí.
+        </p>
+
+        <h2 id="correo">Si ya no tienes la app</h2>
+        <p>
+          <strong>Si iniciaste sesión con Google</strong>, escríbenos desde el correo de esa cuenta
+          a
+          <a href="mailto:marioacr94@gmail.com?subject=Borrar%20mi%20cuenta%20de%20BolichApp"
+            >marioacr94@gmail.com</a
+          >
+          con el asunto «Borrar mi cuenta de BolichApp». Te confirmaremos la recepción en un máximo
+          de <strong>5 días hábiles</strong> y borraremos tu cuenta y tus datos sincronizados en un
+          máximo de <strong>20 días hábiles</strong>; te avisaremos al terminar.
+          <span class="todo">TODO: confirmar plazos.</span>
+        </p>
+        <p>
+          <strong>Si nunca iniciaste sesión con Google</strong>, tus datos solo estaban en tu
+          teléfono: al desinstalar la app, Android los borra. En el servidor solo queda, si usaste
+          «Desde foto», un identificador anónimo y su registro de uso, sin correo ni nombre, que no
+          podemos relacionar contigo.
+          <span class="todo"
+            >TODO: si se implementa el borrado automático de usuarios anónimos inactivos, indicarlo
+            aquí.</span
+          >
+          Si tienes dudas, escríbenos de todos modos y te ayudamos.
+        </p>
+        <p>Más detalles en el <a href="/privacidad/">aviso de privacidad</a>.</p>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <nav aria-label="Legal">
+          <ul>
+            <li><a href="/privacidad/">Aviso de privacidad</a></li>
+            <li><a href="/terminos/">Condiciones del servicio</a></li>
+            <li><a href="/borrar-cuenta/" aria-current="page">Borrar cuenta</a></li>
+            <li><a href="mailto:marioacr94@gmail.com">marioacr94@gmail.com</a></li>
+          </ul>
+        </nav>
+        <p>
+          © 2026 BolichApp · Desarrollada por
+          <span class="todo">TODO: nombre del desarrollador</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

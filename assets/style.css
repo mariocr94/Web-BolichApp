@@ -1,0 +1,393 @@
+/*
+ * BolichApp public site. Colors match the app (src/theme/tokens.ts); dark theme only.
+ * No JavaScript, cookies or external resources: system fonts only.
+ */
+:root {
+  color-scheme: dark;
+  --background: #0e1116;
+  --surface: #181d25;
+  --surface-raised: #232a35;
+  --border: #313a48;
+  --text: #f5f7fa;
+  --text-secondary: #a9b4c2;
+  --primary: #ffa62b;
+  --on-primary: #1b1200;
+  --primary-muted: #3a2a12;
+  --danger: #ff6b6b;
+  --danger-muted: #3a1719;
+  --info: #8ec5ff;
+  --focus-surface: #172231;
+  --focus-border: #2b3d55;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --content: 44rem;
+  --font:
+    system-ui, -apple-system, 'Segoe UI', Roboto, 'Noto Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  overflow-wrap: break-word;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--primary);
+  text-underline-offset: 0.18em;
+}
+
+a:hover {
+  text-decoration-thickness: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--info);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.site-header {
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+}
+
+.site-header .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 48px;
+  color: var(--text);
+  font-weight: 800;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.brand img {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current='page'] {
+  color: var(--text);
+}
+
+.site-nav a[aria-current='page'] {
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+}
+
+.site-nav .lang {
+  padding: 0 0.85rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+}
+
+/* Main */
+main {
+  padding: 2rem 0 3rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin: 2.25rem 0 0.75rem;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 5vw, 2.5rem);
+  font-weight: 800;
+  margin-top: 0.5rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-top: 1.75rem;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 0 0 1rem;
+}
+
+ul,
+ol {
+  padding-left: 1.4rem;
+}
+
+li {
+  margin-bottom: 0.4rem;
+}
+
+li > ul {
+  margin-top: 0.4rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.meta {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.card {
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.card > :last-child {
+  margin-bottom: 0;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+.card.focus {
+  background: var(--focus-surface);
+  border-color: var(--focus-border);
+}
+
+.card.warning {
+  background: var(--danger-muted);
+  border-color: var(--danger);
+}
+
+.toc ol {
+  margin: 0;
+  columns: 2 14rem;
+  column-gap: 2rem;
+}
+
+.toc li {
+  break-inside: avoid;
+}
+
+.steps li::marker {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.path {
+  font-weight: 700;
+  color: var(--text);
+}
+
+kbd,
+code {
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: 0.92em;
+  padding: 0.1em 0.35em;
+  background: var(--surface-raised);
+  border-radius: 4px;
+}
+
+/* Pending items the developer must confirm before publishing (grep "TODO"). */
+.todo {
+  display: inline;
+  padding: 0.05em 0.35em;
+  background: var(--primary-muted);
+  color: var(--primary);
+  border: 1px dashed var(--primary);
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+/* Home */
+.hero {
+  display: grid;
+  gap: 1.25rem;
+  justify-items: start;
+  padding: 1rem 0 1.5rem;
+}
+
+.hero img {
+  width: 104px;
+  height: 104px;
+  border-radius: 24px;
+}
+
+.hero h1 {
+  margin: 0;
+}
+
+.hero .lead {
+  margin: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.features {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+.features li {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.features h3 {
+  margin: 0 0 0.4rem;
+  color: var(--primary);
+}
+
+.features p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+/* Footer */
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.site-footer .wrap {
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.site-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footer li {
+  margin: 0;
+}
+
+.site-footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
