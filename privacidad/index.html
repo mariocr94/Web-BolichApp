@@ -37,14 +37,14 @@
     <main id="contenido">
       <div class="wrap">
         <h1>Aviso de privacidad</h1>
-        <p class="meta">Última actualización: 30 de septiembre de 2026 · Versión 1.1</p>
+        <p class="meta">Última actualización: 30 de septiembre de 2026 · Versión 1.2</p>
 
         <section class="card focus" aria-labelledby="resumen">
           <h2 id="resumen">En resumen</h2>
           <ul>
             <li>
-              <strong>Sin cuenta</strong>, todo se queda en tu teléfono: tus líneas, bolas y
-              sesiones no salen de él.
+              <strong>Sin cuenta</strong>, tus datos de boliche se quedan en tu teléfono: tus
+              líneas, bolas y sesiones no salen de él.
             </li>
             <li>
               <strong>Con Google</strong> (opcional), guardamos en nuestro servidor (Supabase) tu
@@ -55,6 +55,11 @@
               <strong>Fotos del marcador</strong> (requieren cuenta): la foto se reduce, se le
               quitan los metadatos (EXIF, incluida la ubicación), se lee con la API de Anthropic y
               <strong>no se guarda en nuestro servidor</strong>.
+            </li>
+            <li>
+              <strong>Reportes de errores:</strong> si la app falla, envía a Sentry un reporte
+              técnico sin tus datos de boliche, tu nombre ni tu cuenta. Puedes desactivarlo en
+              <span class="path">Ajustes → Privacidad</span>.
             </li>
             <li>
               No hay publicidad ni analítica de terceros, no usamos cookies y no vendemos tus datos.
@@ -79,6 +84,7 @@
                 <li><a href="#uso-limitado">Uso limitado de los datos de Google</a></li>
                 <li><a href="#fotos">Lectura de fotos del marcador</a></li>
                 <li><a href="#tecnicos">Datos técnicos de conexión</a></li>
+                <li><a href="#errores">Reportes de errores</a></li>
                 <li><a href="#no-hacemos">Lo que no hacemos</a></li>
                 <li><a href="#finalidades">Finalidades</a></li>
               </ol>
@@ -115,7 +121,8 @@
         <p>
           Todo lo que capturas se guarda en una base de datos dentro de tu teléfono.
           <strong>En este modo la app no envía tus datos a nuestro servidor</strong> y no tenemos
-          acceso a ellos.
+          acceso a ellos. Lo único que sale del teléfono, si la app falla, es un reporte técnico
+          del error sin tus datos (ver <a href="#errores">sección 2.7</a>).
         </p>
         <ul>
           <li>
@@ -314,13 +321,72 @@
 
         <h3 id="tecnicos">2.6 Datos técnicos de conexión</h3>
         <p>
-          Cuando la app se conecta (inicio de sesión, sincronización, lectura de fotos o borrado de
-          cuenta), nuestros proveedores reciben, como cualquier servicio en internet, tu dirección
+          Cuando la app se conecta (inicio de sesión, sincronización, lectura de fotos, borrado de
+          cuenta o envío de un reporte de errores), nuestros proveedores reciben, como cualquier servicio en internet, tu dirección
           IP y datos técnicos de la solicitud, que pueden quedar en sus registros de seguridad por
           un tiempo limitado. No los usamos para rastrearte.
         </p>
 
-        <h3 id="no-hacemos">2.7 Lo que no hacemos</h3>
+        <h3 id="errores">2.7 Reportes de errores</h3>
+        <p>
+          Si la app falla, envía un reporte técnico del error a Sentry, nuestro proveedor de
+          monitoreo de errores, para que podamos encontrar y corregir la falla. Aplica con o sin
+          cuenta y está activado de forma predeterminada; puedes desactivarlo cuando quieras (ver
+          abajo).
+        </p>
+        <p><strong>Qué se envía:</strong></p>
+        <ul>
+          <li>
+            el tipo y el mensaje del error y la parte del código donde ocurrió (traza de la pila);
+          </li>
+          <li>
+            la versión de la app y datos técnicos del teléfono: fabricante y modelo, versión de
+            Android, idioma, zona horaria, memoria y almacenamiento disponibles y estado de la
+            batería;
+          </li>
+          <li>
+            los eventos técnicos previos al error, sin su contenido: mensajes internos de la app y
+            las conexiones a nuestro servidor (método, dirección sin parámetros y código de
+            respuesta);
+          </li>
+          <li>
+            cuándo empieza y termina cada uso de la app y si terminó en una falla, para medir qué
+            tan estable es cada versión;
+          </li>
+          <li>
+            un identificador aleatorio de la instalación, generado por Sentry, para contar cuántas
+            instalaciones tienen cada falla. No es el ID de Android ni el de publicidad, y no está
+            ligado a tu cuenta.
+          </li>
+        </ul>
+        <p>
+          <strong>Qué no se envía:</strong> tus datos de boliche (líneas, tiros, bolas, sesiones y
+          boliches), tu nombre, tus alias, tu correo, el identificador de tu cuenta, fotos,
+          capturas o grabaciones de la pantalla, ni tu ubicación. Antes de enviar cada reporte, la
+          app quita los datos personales que pudieran ir dentro del mensaje del error (por ejemplo,
+          correos o valores guardados). Los reportes no se asocian a tu cuenta de Google. No
+          medimos el rendimiento de la app ni grabamos lo que haces en ella.
+        </p>
+        <p>
+          <strong>Proveedor y región:</strong> Sentry (Functional Software, Inc.), que trata los
+          reportes como nuestro encargado, con servidores en Estados Unidos. Como cualquier
+          servicio en internet, recibe tu dirección IP al conectarse (ver
+          <a href="#tecnicos">sección 2.6</a>), pero no se guarda con el reporte.
+        </p>
+        <p>
+          <strong>Conservación:</strong> Sentry borra los reportes automáticamente en un máximo de
+          90 días. Como no están ligados a tu cuenta, «Borrar todos mis datos» no puede
+          localizarlos; se eliminan solos en ese plazo.
+        </p>
+        <p>
+          <strong>Cómo desactivarlo:</strong> en
+          <span class="path">Ajustes → Privacidad → Enviar reportes de errores</span>. Desde ese
+          momento la app deja de enviar reportes, incluidos los de fallas posteriores. La opción
+          se guarda en tu perfil y, si usas cuenta de Google, se sincroniza con tus otros
+          teléfonos.
+        </p>
+
+        <h3 id="no-hacemos">2.8 Lo que no hacemos</h3>
         <p>Esto aplica a los datos que recibimos de Google y a cualquier otro dato tuyo:</p>
         <ul>
           <li>No mostramos publicidad ni incluimos SDKs de publicidad.</li>
@@ -347,7 +413,7 @@
           <li>No pedimos tu ubicación, tus contactos ni datos personales sensibles.</li>
         </ul>
 
-        <h3 id="finalidades">2.8 Finalidades</h3>
+        <h3 id="finalidades">2.9 Finalidades</h3>
         <p>Tratamos tus datos solo para prestarte el servicio que pides:</p>
         <ul>
           <li>guardar tus datos y calcular tus estadísticas;</li>
@@ -356,7 +422,10 @@
             inicias sesión con Google;
           </li>
           <li>leer las fotos de marcador que envías y aplicar el límite mensual;</li>
-          <li>atender tus solicitudes y corregir errores de la app.</li>
+          <li>
+            atender tus solicitudes y corregir errores de la app (con los reportes de errores, si
+            no los desactivas).
+          </li>
         </ul>
         <p>
           No hay finalidades secundarias: no usamos tus datos para mercadotecnia, publicidad ni
@@ -379,7 +448,7 @@
           </li>
           <li>
             <strong>Internet:</strong> solo para el inicio de sesión, la sincronización, «Desde
-            foto» y el borrado de cuenta.
+            foto», el borrado de cuenta y el envío de reportes de errores.
           </li>
         </ul>
 
@@ -395,6 +464,10 @@
           </li>
           <li>
             <strong>Anthropic</strong> (Anthropic, PBC): lectura de la foto con su API de Claude.
+            Estados Unidos.
+          </li>
+          <li>
+            <strong>Sentry</strong> (Functional Software, Inc.): reportes de errores de la app.
             Estados Unidos.
           </li>
           <li>
@@ -426,8 +499,8 @@
             servidor solo acepta cambios de la cuenta con la que iniciaste sesión.
           </li>
           <li>
-            Minimización: foto reducida y sin metadatos, descartada al procesarla, y registros sin
-            imágenes ni nombres.
+            Minimización: foto reducida y sin metadatos, descartada al procesarla, registros sin
+            imágenes ni nombres y reportes de errores sin datos personales.
           </li>
         </ul>
         <p>
@@ -463,6 +536,10 @@
           <li>
             <strong>Registros técnicos del servidor:</strong> se eliminan automáticamente en un
             máximo de 7 días.
+          </li>
+          <li>
+            <strong>Reportes de errores:</strong> Sentry los borra automáticamente en un máximo de
+            90 días.
           </li>
         </ul>
 
