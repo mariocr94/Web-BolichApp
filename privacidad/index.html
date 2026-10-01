@@ -37,7 +37,7 @@
     <main id="contenido">
       <div class="wrap">
         <h1>Aviso de privacidad</h1>
-        <p class="meta">Última actualización: 30 de septiembre de 2026 · Versión 1.0</p>
+        <p class="meta">Última actualización: 30 de septiembre de 2026 · Versión 1.1</p>
 
         <section class="card focus" aria-labelledby="resumen">
           <h2 id="resumen">En resumen</h2>
@@ -70,7 +70,19 @@
           <h2 id="indice">Contenido</h2>
           <ol>
             <li><a href="#responsable">Responsable</a></li>
-            <li><a href="#datos">Qué datos tratamos y para qué</a></li>
+            <li>
+              <a href="#datos">Qué datos tratamos y para qué</a>
+              <ol>
+                <li><a href="#sin-cuenta">Si usas la app sin cuenta</a></li>
+                <li><a href="#google">Si inicias sesión con Google</a></li>
+                <li><a href="#datos-google">Datos que recibimos de tu cuenta de Google</a></li>
+                <li><a href="#uso-limitado">Uso limitado de los datos de Google</a></li>
+                <li><a href="#fotos">Lectura de fotos del marcador</a></li>
+                <li><a href="#tecnicos">Datos técnicos de conexión</a></li>
+                <li><a href="#no-hacemos">Lo que no hacemos</a></li>
+                <li><a href="#finalidades">Finalidades</a></li>
+              </ol>
+            </li>
             <li><a href="#permisos">Permisos del teléfono</a></li>
             <li><a href="#proveedores">Proveedores y transferencias</a></li>
             <li><a href="#seguridad">Seguridad</a></li>
@@ -144,11 +156,13 @@
         <ul>
           <li>
             <strong>Tu cuenta.</strong> Solo pedimos a Google los permisos básicos (identidad,
-            correo y perfil). Nuestro servidor guarda el identificador de tu cuenta, tu
-            <strong>correo electrónico</strong>, tu <strong>nombre</strong> y tu
-            <strong>foto de perfil</strong> tal como los entrega Google. No recibimos tu contraseña
-            ni accedemos a otros datos o servicios de tu cuenta de Google. Tu nombre de Google solo
-            se usa para prellenar tu perfil, y tu correo se muestra en Ajustes.
+            correo y perfil). Al iniciar sesión, nuestro servidor guarda el identificador de tu
+            cuenta, tu <strong>correo electrónico</strong> (y si está verificado), tu
+            <strong>nombre</strong> y tu <strong>foto de perfil</strong> tal como los entrega
+            Google. La app solo usa tu correo: lo muestra en Ajustes y durante la configuración
+            inicial. Tu nombre y tu foto de Google quedan guardados como parte de la cuenta, pero la
+            app no los usa ni los muestra. Los detalles están en la
+            <a href="#datos-google">sección 2.3</a>.
           </li>
           <li>
             <strong>Copia de tus datos.</strong> Guardamos una copia de tu perfil (nombre, alias y
@@ -178,7 +192,85 @@
           </li>
         </ul>
 
-        <h3 id="fotos">2.3 Lectura de fotos del marcador («Desde foto»)</h3>
+        <h3 id="datos-google">2.3 Datos que recibimos de tu cuenta de Google</h3>
+        <p>Esta sección aplica solo si inicias sesión con Google.</p>
+
+        <h4 id="google-acceso">Acceso</h4>
+        <p>
+          La app pide a Google únicamente los permisos básicos de inicio de sesión:
+          <code>openid</code>, <code>email</code> y <code>profile</code>. Con ellos recibimos solo
+          estos datos de tu cuenta de Google: el <strong>identificador de la cuenta</strong>, tu
+          <strong>correo electrónico</strong> (y si está verificado), tu <strong>nombre</strong> y
+          tu <strong>foto de perfil</strong>.
+        </p>
+        <p>
+          No accedemos a Gmail, Google Drive, Contactos ni a ningún otro servicio o dato de tu
+          cuenta de Google, y nunca recibimos tu contraseña.
+        </p>
+
+        <h4 id="google-uso">Uso</h4>
+        <p>Usamos estos datos solo para:</p>
+        <ul>
+          <li>identificar tu cuenta y asociarla con tu copia sincronizada de datos de boliche;</li>
+          <li>
+            mostrar tu correo en <span class="path">Ajustes → Cuenta</span> y durante la
+            configuración inicial, para que sepas con qué cuenta entraste.
+          </li>
+        </ul>
+        <p>
+          Tu nombre y tu foto de perfil de Google quedan guardados como parte de la cuenta, pero la
+          app no los usa ni los muestra. El nombre de tu perfil en BolichApp es el que tú escribes.
+        </p>
+
+        <h4 id="google-compartir">Compartir</h4>
+        <p>
+          Estos datos se guardan solo en Supabase, que los trata como nuestro encargado (ver
+          <a href="#proveedores">sección 4</a>).
+          <strong
+            >Tu correo, tu nombre y tu foto de Google no se envían a Anthropic ni a ningún otro
+            tercero.</strong
+          >
+          Lo único que se envía a Anthropic, cuando usas «Desde foto», es la foto del marcador y tus
+          alias (ver <a href="#fotos">sección 2.5</a>).
+        </p>
+
+        <h4 id="google-proteccion">Protección</h4>
+        <ul>
+          <li>Las conexiones entre la app, nuestro servidor y Google usan HTTPS.</li>
+          <li>
+            Nuestro proveedor Supabase cifra la base de datos en reposo (AES-256) y todas las
+            conexiones viajan cifradas (TLS).
+          </li>
+          <li>
+            Los datos de la cuenta viven en el sistema de autenticación de Supabase, al que la app
+            no tiene acceso directo. Tu copia sincronizada está protegida con reglas de seguridad a
+            nivel de fila (RLS): solo tu cuenta puede leerla.
+          </li>
+        </ul>
+
+        <h4 id="google-conservacion">Conservación y borrado</h4>
+        <p>
+          Se conservan hasta que borres tu cuenta. Cerrar sesión no los borra. Al usar
+          <span class="path">Ajustes → Tus datos → Borrar todos mis datos</span> se eliminan tu
+          cuenta con estos datos y tu copia sincronizada, y la app revoca el acceso de BolichApp a
+          tu cuenta de Google. Consulta la <a href="#borrado">sección 7</a> y
+          <a href="/borrar-cuenta/">Borrar tu cuenta</a>.
+        </p>
+
+        <h3 id="uso-limitado">2.4 Uso limitado de los datos de Google</h3>
+        <p>
+          El uso y la transferencia a cualquier otra aplicación de la información recibida de las
+          API de Google se ajustan a la
+          <a href="https://developers.google.com/terms/api-services-user-data-policy"
+            >Política de Datos del Usuario de los Servicios de API de Google</a
+          >, incluidos los requisitos de Uso limitado.
+        </p>
+        <p>
+          Esta política es distinta de la Política de datos del usuario de Google Play, que también
+          cumplimos (ver <a href="#responsable">sección 1</a>).
+        </p>
+
+        <h3 id="fotos">2.5 Lectura de fotos del marcador («Desde foto»)</h3>
         <p>Esta función requiere haber iniciado sesión con Google. Cuando lees una foto:</p>
         <ol>
           <li>
@@ -220,7 +312,7 @@
           sin imágenes ni nombres.
         </p>
 
-        <h3 id="tecnicos">2.4 Datos técnicos de conexión</h3>
+        <h3 id="tecnicos">2.6 Datos técnicos de conexión</h3>
         <p>
           Cuando la app se conecta (inicio de sesión, sincronización, lectura de fotos o borrado de
           cuenta), nuestros proveedores reciben, como cualquier servicio en internet, tu dirección
@@ -228,9 +320,11 @@
           un tiempo limitado. No los usamos para rastrearte.
         </p>
 
-        <h3 id="no-hacemos">2.5 Lo que no hacemos</h3>
+        <h3 id="no-hacemos">2.7 Lo que no hacemos</h3>
+        <p>Esto aplica a los datos que recibimos de Google y a cualquier otro dato tuyo:</p>
         <ul>
           <li>No mostramos publicidad ni incluimos SDKs de publicidad.</li>
+          <li>No usamos tus datos para publicidad dirigida ni personalizada.</li>
           <li>
             No usamos analítica de terceros ni rastreamos tu actividad en otras apps o sitios.
           </li>
@@ -239,10 +333,21 @@
             terceros.
           </li>
           <li>No vendemos ni rentamos tus datos, ni los compartimos para fines de terceros.</li>
+          <li>
+            No damos tus datos a corredores de datos (data brokers) ni a revendedores de
+            información.
+          </li>
+          <li>
+            No usamos tus datos para evaluar tu solvencia crediticia ni para otorgar préstamos.
+          </li>
+          <li>
+            No usamos tus datos, ni permitimos que se usen, para entrenar modelos de inteligencia
+            artificial o de aprendizaje automático, ni nuestros ni de terceros.
+          </li>
           <li>No pedimos tu ubicación, tus contactos ni datos personales sensibles.</li>
         </ul>
 
-        <h3 id="finalidades">2.6 Finalidades</h3>
+        <h3 id="finalidades">2.8 Finalidades</h3>
         <p>Tratamos tus datos solo para prestarte el servicio que pides:</p>
         <ul>
           <li>guardar tus datos y calcular tus estadísticas;</li>
@@ -308,6 +413,10 @@
         <h2 id="seguridad">5. Seguridad</h2>
         <ul>
           <li>Conexiones cifradas (HTTPS) entre la app, nuestro servidor y los proveedores.</li>
+          <li>
+            Nuestro proveedor Supabase cifra la base de datos en reposo (AES-256) y todas las
+            conexiones viajan cifradas (TLS).
+          </li>
           <li>
             Las claves de servicios de pago (como la de Anthropic) están solo en el servidor, nunca
             en la app.
