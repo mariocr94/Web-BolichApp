@@ -39,15 +39,6 @@
         <h1>Aviso de privacidad</h1>
         <p class="meta">Última actualización: 30 de septiembre de 2026 · Versión 1.0</p>
 
-        <p class="card warning">
-          <span class="todo"
-            >TODO: este aviso describe la app con la Fase 7b (docs/cloud-sync-plan.md: cuenta con
-            Google, sincronización y «Desde foto» solo con cuenta; sin usuarios anónimos). Esa fase
-            aún no está implementada: hoy la app crea un usuario anónimo al usar «Desde foto».
-            Confirmar cada punto al implementarla y publicar este aviso junto con esa versión.</span
-          >
-        </p>
-
         <section class="card focus" aria-labelledby="resumen">
           <h2 id="resumen">En resumen</h2>
           <ul>
@@ -66,8 +57,7 @@
               <strong>no se guarda en nuestro servidor</strong>.
             </li>
             <li>
-              No hay publicidad ni analítica de terceros, no usamos cookies y no vendemos tus
-              datos.
+              No hay publicidad ni analítica de terceros, no usamos cookies y no vendemos tus datos.
             </li>
             <li>
               Puedes borrar todo desde la app:
@@ -95,22 +85,15 @@
 
         <h2 id="responsable">1. Responsable</h2>
         <p>
-          El responsable del tratamiento de tus datos personales es
-          <span class="todo">TODO: nombre del desarrollador</span>, desarrollador independiente de
-          BolichApp («nosotros»), con domicilio para oír y recibir notificaciones en
-          <span class="todo"
-            >TODO: domicilio (la ley mexicana lo exige en el aviso integral; puede ser un domicilio
-            de contacto)</span
-          >. Contacto: <a href="mailto:marioacr94@gmail.com">marioacr94@gmail.com</a>.
+          El responsable del tratamiento de tus datos personales es Mario Carrillo (CarMaDev),
+          desarrollador independiente de BolichApp («nosotros»), con domicilio para oír y recibir
+          notificaciones en De la Plaza 5401, Zapopan, Jalisco, México. Contacto:
+          <a href="mailto:marioacr94@gmail.com">marioacr94@gmail.com</a>.
         </p>
         <p>
           Este aviso se emite conforme a la Ley Federal de Protección de Datos Personales en
-          Posesión de los Particulares
-          <span class="todo"
-            >TODO: confirmar que se cite la ley vigente (publicada en el DOF el 20 de marzo de 2025)
-            y su reglamento</span
-          >
-          y a la Política de datos del usuario de Google Play.
+          Posesión de los Particulares (publicada en el Diario Oficial de la Federación el 20 de
+          marzo de 2025) y a la Política de datos del usuario de Google Play.
         </p>
 
         <h2 id="datos">2. Qué datos tratamos y para qué</h2>
@@ -123,9 +106,9 @@
         </p>
         <ul>
           <li>
-            <strong>Perfil:</strong> tu nombre, los alias con los que apareces en los marcadores,
-            la mano con la que tiras (opcional), la unidad de velocidad, el idioma y tus
-            preferencias de la app.
+            <strong>Perfil:</strong> tu nombre, los alias con los que apareces en los marcadores, la
+            mano con la que tiras (opcional), la unidad de velocidad, el idioma y tus preferencias
+            de la app.
           </li>
           <li>
             <strong>Bolas:</strong> nombre, marca, peso, cubierta, layout, fecha de compra, notas y
@@ -150,12 +133,6 @@
           <strong>Copia de seguridad de Android.</strong> Si tienes activada la copia de seguridad
           de tu cuenta de Google en el teléfono, Android puede incluir los datos de la app en ella.
           Esa copia la gestiona Google, no nosotros.
-          <span class="todo"
-            >TODO: decidir si se mantiene (hoy la app usa el valor por defecto de Expo,
-            <code>allowBackup</code> = true) o se desactiva con
-            <code>android.allowBackup: false</code> en app.json; si se desactiva, quitar este
-            párrafo.</span
-          >
         </p>
 
         <h3 id="google">2.2 Si inicias sesión con Google (opcional)</h3>
@@ -169,8 +146,8 @@
             correo y perfil). Nuestro servidor guarda el identificador de tu cuenta, tu
             <strong>correo electrónico</strong>, tu <strong>nombre</strong> y tu
             <strong>foto de perfil</strong> tal como los entrega Google. No recibimos tu contraseña
-            ni accedemos a otros datos o servicios de tu cuenta de Google. Tu nombre de Google
-            solo se usa para prellenar tu perfil, y tu correo se muestra en Ajustes.
+            ni accedemos a otros datos o servicios de tu cuenta de Google. Tu nombre de Google solo
+            se usa para prellenar tu perfil, y tu correo se muestra en Ajustes.
           </li>
           <li>
             <strong>Copia de tus datos.</strong> Guardamos una copia de tu perfil (nombre, alias y
@@ -180,15 +157,23 @@
             cambio.
           </li>
           <li>
-            <strong>Lo que no se sube:</strong> las fotos del marcador guardadas en tu teléfono.
+            <strong>Lo que no se sube:</strong> las fotos del marcador guardadas en tu teléfono y
+            los respaldos que exportas.
+          </li>
+          <li>
+            <strong>Si ya tenías datos en el teléfono</strong> al conectar tu cuenta, se suben a tu
+            copia. Si tu cuenta ya tenía datos de otro teléfono, la app te pregunta antes de
+            unirlos; si cancelas, no se sube nada y sigues sin cuenta.
           </li>
           <li>
             <strong>Acceso:</strong> solo tu cuenta puede leer tu copia; está protegida con reglas
             de seguridad a nivel de fila.
           </li>
           <li>
-            <strong>Cerrar sesión</strong> borra los datos de ese teléfono; la copia en nuestro
-            servidor se conserva hasta que borres tu cuenta.
+            <strong>Cerrar sesión</strong> sincroniza y luego borra los datos de ese teléfono; la
+            copia en nuestro servidor se conserva hasta que borres tu cuenta. Si hay cambios que no
+            se han podido subir (por ejemplo, sin conexión), la app te avisa antes, porque se
+            perderían.
           </li>
         </ul>
 
@@ -215,13 +200,9 @@
           </li>
         </ol>
         <p>
-          Anthropic trata la foto como nuestro proveedor, conforme a sus condiciones comerciales:
-          no la usa para entrenar sus modelos y la conserva solo por un periodo limitado antes de
-          borrarla.
-          <span class="todo"
-            >TODO: confirmar en la política vigente de Anthropic el plazo de retención de la API y
-            si aplica retención adicional por seguridad.</span
-          >
+          Anthropic trata la foto como nuestro proveedor, conforme a sus condiciones comerciales: no
+          la usa para entrenar sus modelos y la conserva solo por un periodo limitado antes de
+          borrarla, según su política de retención de datos de la API.
         </p>
         <p>
           La foto puede mostrar los nombres de otros jugadores tal como aparecen en la pantalla del
@@ -234,26 +215,11 @@
           fecha y hora, resultado (leída, ilegible o fallida), modelo usado, tokens consumidos,
           costo estimado, tamaño de la imagen y un código de error si lo hubo.
           <strong>No contiene imágenes, nombres, alias ni la lectura.</strong> El servidor también
-          escribe registros técnicos con esos mismos datos y la duración de la solicitud,
-          igualmente sin imágenes ni nombres.
+          escribe registros técnicos con esos mismos datos y la duración de la solicitud, igualmente
+          sin imágenes ni nombres.
         </p>
 
-        <h3 id="errores">2.4 Reportes de errores (si está activo)</h3>
-        <p>
-          <span class="todo"
-            >TODO: Sentry todavía no está integrado en la app. Confirmar esta sección cuando se
-            active, o quitarla.</span
-          >
-        </p>
-        <p>
-          Si la app falla, puede enviar un reporte técnico a Sentry para que podamos corregir el
-          error: el tipo de error y dónde ocurrió en el código, la versión de la app, el modelo del
-          teléfono y la versión de Android. Los reportes están configurados para no incluir datos
-          personales (sin dirección IP, sin tu nombre, correo ni alias, y sin lo que captures en la
-          app). Puedes desactivarlos en cualquier momento en Ajustes.
-        </p>
-
-        <h3 id="tecnicos">2.5 Datos técnicos de conexión</h3>
+        <h3 id="tecnicos">2.4 Datos técnicos de conexión</h3>
         <p>
           Cuando la app se conecta (inicio de sesión, sincronización, lectura de fotos o borrado de
           cuenta), nuestros proveedores reciben, como cualquier servicio en internet, tu dirección
@@ -261,7 +227,7 @@
           un tiempo limitado. No los usamos para rastrearte.
         </p>
 
-        <h3 id="no-hacemos">2.6 Lo que no hacemos</h3>
+        <h3 id="no-hacemos">2.5 Lo que no hacemos</h3>
         <ul>
           <li>No mostramos publicidad ni incluimos SDKs de publicidad.</li>
           <li>
@@ -275,7 +241,7 @@
           <li>No pedimos tu ubicación, tus contactos ni datos personales sensibles.</li>
         </ul>
 
-        <h3 id="finalidades">2.7 Finalidades</h3>
+        <h3 id="finalidades">2.6 Finalidades</h3>
         <p>Tratamos tus datos solo para prestarte el servicio que pides:</p>
         <ul>
           <li>guardar tus datos y calcular tus estadísticas;</li>
@@ -319,8 +285,7 @@
         <ul>
           <li>
             <strong>Supabase</strong> (Supabase, Inc.): cuentas, base de datos de sincronización y
-            funciones del servidor. Región de los servidores:
-            <span class="todo">TODO: región del proyecto de Supabase</span>.
+            funciones del servidor. Región de los servidores: Canadá (ca-central-1).
           </li>
           <li>
             <strong>Anthropic</strong> (Anthropic, PBC): lectura de la foto con su API de Claude.
@@ -330,14 +295,10 @@
             <strong>Google</strong> (Google LLC): inicio de sesión con Google. Además, Google Play
             distribuye la app y trata sus propios datos según su política de privacidad.
           </li>
-          <li>
-            <strong>Sentry</strong> (Functional Software, Inc.): reportes de errores, si está
-            activo. <span class="todo">TODO: cuando exista; confirmar región (EUA o UE).</span>
-          </li>
         </ul>
         <p>
-          Estos proveedores operan fuera de México, principalmente en Estados Unidos, por lo que tus
-          datos pueden tratarse en otros países. Las remisiones a encargados no requieren tu
+          Estos proveedores operan fuera de México, en Canadá y Estados Unidos, por lo que tus datos
+          pueden tratarse en otros países. Las remisiones a encargados no requieren tu
           consentimiento; les exigimos tratar los datos solo para prestarnos el servicio. No hacemos
           transferencias a terceros que requieran tu consentimiento. Solo revelaríamos datos si una
           autoridad competente lo exige conforme a la ley.
@@ -351,8 +312,8 @@
             en la app.
           </li>
           <li>
-            Reglas de seguridad a nivel de fila: cada cuenta solo puede leer sus propios datos, y
-            el servidor valida todo lo que se sube.
+            Reglas de seguridad a nivel de fila: cada cuenta solo puede leer sus propios datos, y el
+            servidor solo acepta cambios de la cuenta con la que iniciaste sesión.
           </li>
           <li>
             Minimización: foto reducida y sin metadatos, descartada al procesarla, y registros sin
@@ -367,16 +328,12 @@
         <h2 id="conservacion">6. Cuánto tiempo conservamos tus datos</h2>
         <ul>
           <li>
-            <strong>Datos en tu teléfono:</strong> hasta que los borres, cierres sesión,
-            desinstales la app o uses «Borrar todos mis datos».
+            <strong>Datos en tu teléfono:</strong> hasta que los borres, cierres sesión, desinstales
+            la app o uses «Borrar todos mis datos».
           </li>
           <li>
             <strong>Cuenta y copia sincronizada:</strong> hasta que borres tu cuenta desde la app o
-            nos pidas borrarla.
-            <span class="todo"
-              >TODO: definir si se borran las cuentas inactivas (p. ej. tras 24 meses sin uso,
-              con aviso previo por correo).</span
-            >
+            nos pidas borrarla. No borramos cuentas por inactividad.
           </li>
           <li>
             <strong>Foto del marcador en el servidor:</strong> no se conserva; solo existe en
@@ -385,21 +342,17 @@
           <li>
             <strong>Registro de uso de fotos:</strong> mientras exista tu cuenta. Al borrarla, esos
             registros se conservan <strong>sin ningún identificador</strong> (ya no se pueden
-            asociar a nadie) para la contabilidad del gasto y el límite diario del servicio.
-            <span class="todo">TODO: definir plazo máximo (p. ej. 24 meses).</span>
+            asociar a nadie) para la contabilidad del gasto y el límite diario del servicio. Se
+            conservan un máximo de 24 meses.
           </li>
           <li>
-            <strong>Copias de seguridad del servidor:</strong> los datos borrados pueden seguir en
-            las copias automáticas de la base de datos hasta que estas se renuevan.
-            <span class="todo">TODO: plazo según el plan de Supabase (p. ej. 7 días en Pro).</span>
+            <strong>Copias de seguridad del servidor:</strong> los datos borrados pueden seguir
+            hasta 7 días en las copias automáticas de la base de datos, si las hay, hasta que estas
+            se renuevan.
           </li>
           <li>
-            <strong>Registros técnicos del servidor:</strong>
-            <span class="todo">TODO: plazo según el plan de Supabase</span>.
-          </li>
-          <li>
-            <strong>Reportes de errores:</strong>
-            <span class="todo">TODO: retención configurada en Sentry (p. ej. 90 días)</span>.
+            <strong>Registros técnicos del servidor:</strong> se eliminan automáticamente en un
+            máximo de 7 días.
           </li>
         </ul>
 
@@ -414,8 +367,8 @@
         <h2 id="derechos">8. Tus derechos (ARCO), revocación y limitación</h2>
         <p>
           Tienes derecho a <strong>acceder</strong> a tus datos, <strong>rectificarlos</strong>,
-          <strong>cancelarlos</strong> y <strong>oponerte</strong> a su tratamiento (derechos
-          ARCO), así como a revocar tu consentimiento y a limitar su uso o divulgación.
+          <strong>cancelarlos</strong> y <strong>oponerte</strong> a su tratamiento (derechos ARCO),
+          así como a revocar tu consentimiento y a limitar su uso o divulgación.
         </p>
         <ul>
           <li>
@@ -436,7 +389,6 @@
           <li>
             Te responderemos en un máximo de <strong>20 días hábiles</strong> y, si procede,
             aplicaremos la respuesta dentro de los <strong>15 días hábiles</strong> siguientes.
-            <span class="todo">TODO: confirmar plazos en la ley vigente.</span>
           </li>
           <li>
             Si usas la app sin cuenta, no tenemos datos tuyos en nuestro servidor: todo está en tu
@@ -444,22 +396,16 @@
           </li>
           <li>
             Si consideras que no atendimos tu solicitud, puedes acudir a la autoridad de protección
-            de datos personales.
-            <span class="todo"
-              >TODO: confirmar la autoridad vigente (tras la extinción del INAI, la Secretaría
-              Anticorrupción y Buen Gobierno).</span
-            >
+            de datos personales, actualmente la Secretaría Anticorrupción y Buen Gobierno.
           </li>
         </ul>
 
         <h2 id="menores">9. Menores de edad</h2>
         <p>
-          BolichApp no está dirigida a menores de 13 años y no recabamos a sabiendas datos de
-          ellos. Si eres menor de 18 años, usa la app con permiso de tu madre, padre o tutor. Si
-          crees que un menor nos envió datos, escríbenos y los borraremos.
-          <span class="todo"
-            >TODO: alinear con el público objetivo que declares en Google Play Console.</span
-          >
+          BolichApp es para aficionados al boliche de 13 años en adelante. No está dirigida a
+          menores de 13 años y no recabamos a sabiendas datos de ellos. Si eres menor de 18 años,
+          usa la app con permiso de tu madre, padre o tutor. Si crees que un menor nos envió datos,
+          escríbenos y los borraremos.
         </p>
 
         <h2 id="cambios">10. Cambios a este aviso</h2>
@@ -487,10 +433,7 @@
             <li><a href="mailto:marioacr94@gmail.com">marioacr94@gmail.com</a></li>
           </ul>
         </nav>
-        <p>
-          © 2026 BolichApp · Desarrollada por
-          <span class="todo">TODO: nombre del desarrollador</span>
-        </p>
+        <p>© 2026 BolichApp · Desarrollada por CarMaDev</p>
       </div>
     </footer>
   </body>

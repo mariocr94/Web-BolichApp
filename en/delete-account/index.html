@@ -40,9 +40,8 @@
       <div class="wrap">
         <h1>Delete your BolichApp account and data</h1>
         <p class="lead">
-          BolichApp is an app by
-          <span class="todo">TODO: developer name (same as on Google Play)</span>. This page
-          explains how to delete your account and data, what is deleted and what is kept.
+          BolichApp is an app by Mario Carrillo (CarMaDev). This page explains how to delete your
+          account and data, what is deleted and what is kept.
         </p>
 
         <h2 id="in-app">From the app (recommended)</h2>
@@ -54,9 +53,16 @@
         </ol>
         <p>
           Deletion is immediate and cannot be undone. If you want to keep your games, export a
-          backup from the same screen first. Without a connection, the app offers to delete only
-          what is on the phone; you can repeat the process online to also delete your user on the
-          server.
+          backup from the same screen first.
+        </p>
+        <p>
+          You need a connection to delete your account. Offline, the app offers to delete only what
+          is on the phone; your account and cloud copy are kept until you repeat the process online
+          or ask us by email.
+        </p>
+        <p>
+          <strong>Signing out is not the same as deleting:</strong> signing out deletes the data on
+          the phone, but your account and cloud copy are kept so you can sign back in.
         </p>
 
         <h2 id="deleted">What is deleted</h2>
@@ -66,13 +72,10 @@
             games and rolls, kept scoreboard photos, and the app’s temporary backup files.
           </li>
           <li>
-            <strong>On our server:</strong> your user (anonymous or Google) and any quota setting
-            linked to it.
+            <strong>On our server:</strong> your account (identifier, email, name and Google profile
+            picture), the whole synced copy of your data, and any photo quota setting linked to it.
           </li>
-          <li>
-            <strong>If you signed in with Google:</strong> your email, your name and all your synced
-            data. <span class="todo">TODO: confirm when sync is implemented.</span>
-          </li>
+          <li><strong>At Google:</strong> BolichApp’s access to your Google account is revoked.</li>
         </ul>
 
         <h2 id="kept">What is kept</h2>
@@ -80,14 +83,17 @@
           <li>
             <strong>Photo usage log, without an identifier.</strong> For each photo read we keep the
             date, outcome, model, tokens, estimated cost, image size and error code, but it is
-            detached from your user when the user is deleted, so it can no longer be linked to
+            detached from your account when the account is deleted, so it can no longer be linked to
             anyone. It never contained images, names or aliases. We use it for cost accounting and
-            the service’s daily limit.
-            <span class="todo">TODO: maximum retention period (e.g. 24 months).</span>
+            the service’s daily limit. We keep it for up to 24 months.
+          </li>
+          <li>
+            <strong>Server backups:</strong> your data may remain for up to 7 days in the database’s
+            automatic backups, if any, until they roll over.
           </li>
           <li>
             <strong>Server technical logs</strong> (no images or names), which are deleted
-            automatically. <span class="todo">TODO: period per the Supabase plan.</span>
+            automatically within 7 days.
           </li>
           <li>
             <strong>Backups you exported</strong> and shared (for example, on WhatsApp or Google
@@ -100,25 +106,22 @@
 
         <h2 id="email">If you no longer have the app</h2>
         <p>
-          <strong>If you signed in with Google</strong>, email us from that account’s address at
+          Email us <strong>from the Google account address</strong> you used with BolichApp at
           <a href="mailto:marioacr94@gmail.com?subject=Delete%20my%20BolichApp%20account"
             >marioacr94@gmail.com</a
           >
           with the subject “Delete my BolichApp account”. We will acknowledge your request within
-          <strong>5 business days</strong> and delete your account and synced data within
-          <strong>20 business days</strong>; we will let you know when it’s done.
-          <span class="todo">TODO: confirm periods.</span>
+          <strong>5 business days</strong> and delete your account and data within
+          <strong>20 business days</strong>; we will let you know when it’s done. If you write from
+          another address, we may ask for information to verify the account is yours.
         </p>
         <p>
-          <strong>If you never signed in with Google</strong>, your data was only on your phone:
-          Android deletes it when you uninstall the app. If you used “From photo”, the server only
-          keeps an anonymous identifier and its usage log, with no email or name, which we cannot
-          link to you.
-          <span class="todo"
-            >TODO: if automatic deletion of inactive anonymous users is implemented, mention it
-            here.</span
-          >
-          If you have questions, write to us anyway and we’ll help.
+          <strong>If you used the app without an account</strong>, your data was only on your phone
+          and we hold nothing of yours on the server: Android deletes it when you uninstall the app.
+        </p>
+        <p>
+          You can also remove BolichApp’s access from your Google account’s security settings; that
+          does not delete your data on our server.
         </p>
         <p>More details in the <a href="/en/privacy/">Privacy Policy</a>.</p>
       </div>
@@ -134,7 +137,7 @@
             <li><a href="mailto:marioacr94@gmail.com">marioacr94@gmail.com</a></li>
           </ul>
         </nav>
-        <p>© 2026 BolichApp · Developed by <span class="todo">TODO: developer name</span></p>
+        <p>© 2026 BolichApp · Developed by CarMaDev</p>
       </div>
     </footer>
   </body>

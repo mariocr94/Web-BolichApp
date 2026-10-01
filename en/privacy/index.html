@@ -44,22 +44,12 @@
           >) is the governing text for purposes of Mexican law.
         </p>
 
-        <p class="card warning">
-          <span class="todo"
-            >TODO: this policy describes the app with Phase 7b (docs/cloud-sync-plan.md: Google
-            account, sync, and “From photo” only with an account; no anonymous users). That phase is
-            not implemented yet: today the app creates an anonymous user when “From photo” is used.
-            Confirm every point when implementing it and publish this policy with that
-            version.</span
-          >
-        </p>
-
         <section class="card focus" aria-labelledby="summary">
           <h2 id="summary">Summary</h2>
           <ul>
             <li>
-              <strong>Without an account</strong>, everything stays on your phone: your games,
-              balls and sessions never leave it.
+              <strong>Without an account</strong>, everything stays on your phone: your games, balls
+              and sessions never leave it.
             </li>
             <li>
               <strong>With Google</strong> (optional), we store your email, name, profile picture
@@ -98,17 +88,15 @@
 
         <h2 id="controller">1. Who is responsible</h2>
         <p>
-          The party responsible for your personal data is
-          <span class="todo">TODO: developer name</span>, the independent developer of BolichApp
-          (“we”), with an address for notices at
-          <span class="todo">TODO: address (required by Mexican law)</span>. Contact:
+          The party responsible for your personal data is Mario Carrillo (CarMaDev), the independent
+          developer of BolichApp (“we”), with an address for notices at De la Plaza 5401, Zapopan,
+          Jalisco, Mexico. Contact:
           <a href="mailto:marioacr94@gmail.com">marioacr94@gmail.com</a>.
         </p>
         <p>
           This policy follows Mexico’s Federal Law on the Protection of Personal Data Held by
-          Private Parties
-          <span class="todo">TODO: confirm the law in force (published March 20, 2025)</span>
-          and the Google Play User Data policy.
+          Private Parties (published in the Official Gazette on March 20, 2025) and the Google Play
+          User Data policy.
         </p>
 
         <h2 id="data">2. What data we handle and why</h2>
@@ -116,8 +104,8 @@
         <h3 id="no-account">2.1 Using the app without an account</h3>
         <p>
           Everything you enter is stored in a database on your phone.
-          <strong>In this mode the app does not send your data to our server</strong> and we have
-          no access to it.
+          <strong>In this mode the app does not send your data to our server</strong> and we have no
+          access to it.
         </p>
         <ul>
           <li>
@@ -139,18 +127,13 @@
         </ul>
         <p>
           <strong>Backups.</strong> When you export a backup, the app creates a file and opens the
-          Android share menu; you choose where it goes (for example, WhatsApp or Google Drive).
-          That file never goes through our servers and is subject to the privacy terms of the
-          service you choose. Photos are not included in backups.
+          Android share menu; you choose where it goes (for example, WhatsApp or Google Drive). That
+          file never goes through our servers and is subject to the privacy terms of the service you
+          choose. Photos are not included in backups.
         </p>
         <p>
           <strong>Android backup.</strong> If your phone’s Google account backup is turned on,
           Android may include the app’s data in it. That backup is managed by Google, not by us.
-          <span class="todo"
-            >TODO: keep (the app uses Expo’s default <code>allowBackup</code> = true) or disable
-            with <code>android.allowBackup: false</code> in app.json; if disabled, remove this
-            paragraph.</span
-          >
         </p>
 
         <h3 id="google">2.2 Signing in with Google (optional)</h3>
@@ -160,8 +143,8 @@
         </p>
         <ul>
           <li>
-            <strong>Your account.</strong> We only ask Google for basic permissions (identity,
-            email and profile). Our server stores your account identifier, your
+            <strong>Your account.</strong> We only ask Google for basic permissions (identity, email
+            and profile). Our server stores your account identifier, your
             <strong>email address</strong>, your <strong>name</strong> and your
             <strong>profile picture</strong> as provided by Google. We never receive your password
             or access other data or services in your Google account. Your Google name is only used
@@ -173,14 +156,24 @@
             It includes markers for items you delete, so deletions reach your other phones, and a
             random identifier of the installation that made each change.
           </li>
-          <li><strong>Not uploaded:</strong> scoreboard photos kept on your phone.</li>
+          <li>
+            <strong>Not uploaded:</strong> scoreboard photos kept on your phone and the backups you
+            export.
+          </li>
+          <li>
+            <strong>If your phone already had data</strong> when you connect your account, it is
+            uploaded to your copy. If your account already has data from another phone, the app asks
+            you before merging them; if you cancel, nothing is uploaded and you stay without an
+            account.
+          </li>
           <li>
             <strong>Access:</strong> only your account can read your copy; it is protected with
             row-level security.
           </li>
           <li>
-            <strong>Signing out</strong> deletes the data on that phone; the copy on our server is
-            kept until you delete your account.
+            <strong>Signing out</strong> syncs and then deletes the data on that phone; the copy on
+            our server is kept until you delete your account. If some changes could not be uploaded
+            yet (for example, while offline), the app warns you first, because they would be lost.
           </li>
         </ul>
 
@@ -201,23 +194,19 @@
             the scoreboard (so you can pick your row if your alias was not found).
           </li>
           <li>
-            <strong>The photo is not stored on our server</strong> or in its logs: it only exists
-            in memory while it is processed. The reading is not stored on the server either: it is
-            sent back to your phone, and nothing is saved in the app until you review and confirm
-            it.
+            <strong>The photo is not stored on our server</strong> or in its logs: it only exists in
+            memory while it is processed. The reading is not stored on the server either: it is sent
+            back to your phone, and nothing is saved in the app until you review and confirm it.
           </li>
         </ol>
         <p>
           Anthropic processes the photo as our provider under its commercial terms: it does not use
-          it to train its models and keeps it only for a limited period before deleting it.
-          <span class="todo"
-            >TODO: confirm Anthropic’s current API retention period and any safety-related
-            retention.</span
-          >
+          it to train its models and keeps it only for a limited period before deleting it, under
+          its API data retention policy.
         </p>
         <p>
-          The photo may show other players’ names as they appear on the bowling center screen.
-          They are used only to locate your row and are not stored on the server. We recommend
+          The photo may show other players’ names as they appear on the bowling center screen. They
+          are used only to locate your row and are not stored on the server. We recommend
           photographing only the scoreboard.
         </p>
         <p>
@@ -225,34 +214,19 @@
           cost of the service, for each photo we store: your account identifier, date and time,
           outcome (read, unreadable or failed), model used, tokens consumed, estimated cost, image
           size and an error code if any.
-          <strong>It contains no images, names, aliases or readings.</strong> The server also
-          writes technical logs with the same data plus the request duration, likewise without
-          images or names.
+          <strong>It contains no images, names, aliases or readings.</strong> The server also writes
+          technical logs with the same data plus the request duration, likewise without images or
+          names.
         </p>
 
-        <h3 id="crash-reports">2.4 Crash reports (if enabled)</h3>
-        <p>
-          <span class="todo"
-            >TODO: Sentry is not integrated in the app yet. Confirm this section when it is, or
-            remove it.</span
-          >
-        </p>
-        <p>
-          If the app crashes, it may send a technical report to Sentry so we can fix the bug: the
-          error type and where in the code it happened, the app version, the phone model and the
-          Android version. Reports are configured to exclude personal data (no IP address, no name,
-          email or aliases, nothing you enter in the app). You can turn them off at any time in
-          Settings.
-        </p>
-
-        <h3 id="technical">2.5 Technical connection data</h3>
+        <h3 id="technical">2.4 Technical connection data</h3>
         <p>
           When the app connects (sign-in, sync, photo reading or account deletion), our providers
           receive, like any internet service, your IP address and technical request data, which may
           be kept in their security logs for a limited time. We do not use them to track you.
         </p>
 
-        <h3 id="we-dont">2.6 What we don’t do</h3>
+        <h3 id="we-dont">2.5 What we don’t do</h3>
         <ul>
           <li>No ads and no advertising SDKs.</li>
           <li>No third-party analytics and no tracking across other apps or websites.</li>
@@ -264,7 +238,7 @@
           <li>We don’t ask for your location, contacts or sensitive personal data.</li>
         </ul>
 
-        <h3 id="purposes">2.7 Purposes</h3>
+        <h3 id="purposes">2.6 Purposes</h3>
         <p>We use your data only to provide the service you ask for:</p>
         <ul>
           <li>storing your data and computing your stats;</li>
@@ -303,7 +277,7 @@
         <ul>
           <li>
             <strong>Supabase</strong> (Supabase, Inc.): accounts, the sync database and server
-            functions. Server region: <span class="todo">TODO: Supabase project region</span>.
+            functions. Server region: Canada (ca-central-1).
           </li>
           <li>
             <strong>Anthropic</strong> (Anthropic, PBC): reading photos with its Claude API. United
@@ -313,17 +287,13 @@
             <strong>Google</strong> (Google LLC): Google sign-in. Google Play also distributes the
             app and handles its own data under its privacy policy.
           </li>
-          <li>
-            <strong>Sentry</strong> (Functional Software, Inc.): crash reports, if enabled.
-            <span class="todo">TODO: when it exists; confirm region (US or EU).</span>
-          </li>
         </ul>
         <p>
-          These providers operate outside Mexico, mainly in the United States, so your data may be
-          processed in other countries. Sharing data with processors does not require your consent;
-          we require them to use it only to provide their service to us. We make no transfers to
-          third parties that would require your consent. We would only disclose data if a competent
-          authority legally requires it.
+          These providers operate outside Mexico, in Canada and the United States, so your data may
+          be processed in other countries. Sharing data with processors does not require your
+          consent; we require them to use it only to provide their service to us. We make no
+          transfers to third parties that would require your consent. We would only disclose data if
+          a competent authority legally requires it.
         </p>
 
         <h2 id="security">5. Security</h2>
@@ -333,8 +303,8 @@
             Keys for paid services (such as Anthropic’s) live only on the server, never in the app.
           </li>
           <li>
-            Row-level security: each account can read only its own data, and the server validates
-            everything that is uploaded.
+            Row-level security: each account can read only its own data, and the server only accepts
+            changes from the account you signed in with.
           </li>
           <li>
             Data minimization: downscaled photos without metadata, discarded after processing, and
@@ -354,11 +324,7 @@
           </li>
           <li>
             <strong>Account and synced copy:</strong> until you delete your account from the app or
-            ask us to delete it.
-            <span class="todo"
-              >TODO: decide whether inactive accounts are deleted (e.g. after 24 months without use,
-              with prior notice by email).</span
-            >
+            ask us to delete it. We do not delete accounts for inactivity.
           </li>
           <li>
             <strong>Scoreboard photo on the server:</strong> not kept; it only exists in memory
@@ -367,22 +333,14 @@
           <li>
             <strong>Photo usage log:</strong> while your account exists. Once it is deleted, those
             records are kept <strong>without any identifier</strong> (they can no longer be linked
-            to anyone) for cost accounting and the service’s daily limit.
-            <span class="todo">TODO: define a maximum period (e.g. 24 months).</span>
+            to anyone) for cost accounting and the service’s daily limit. They are kept for up to 24
+            months.
           </li>
           <li>
-            <strong>Server backups:</strong> deleted data may remain in the database’s automatic
-            backups until they roll over.
-            <span class="todo">TODO: period per the Supabase plan (e.g. 7 days on Pro).</span>
+            <strong>Server backups:</strong> deleted data may remain for up to 7 days in the
+            database’s automatic backups, if any, until they roll over.
           </li>
-          <li>
-            <strong>Server technical logs:</strong>
-            <span class="todo">TODO: period per the Supabase plan</span>.
-          </li>
-          <li>
-            <strong>Crash reports:</strong>
-            <span class="todo">TODO: retention configured in Sentry (e.g. 90 days)</span>.
-          </li>
+          <li><strong>Server technical logs:</strong> deleted automatically within 7 days.</li>
         </ul>
 
         <h2 id="deletion">7. How to delete your data</h2>
@@ -403,8 +361,8 @@
         </p>
         <ul>
           <li>
-            You can do almost all of this yourself in the app: view and correct your data, export
-            it as a backup, sign out and delete your account.
+            You can do almost all of this yourself in the app: view and correct your data, export it
+            as a backup, sign out and delete your account.
           </li>
           <li>
             For any request, email
@@ -419,7 +377,6 @@
           <li>
             We will reply within <strong>20 business days</strong> and, where applicable, carry out
             the request within the following <strong>15 business days</strong>.
-            <span class="todo">TODO: confirm periods under the law in force.</span>
           </li>
           <li>
             If you use the app without an account, we hold no data about you on our server:
@@ -427,20 +384,17 @@
           </li>
           <li>
             If you believe we did not handle your request properly, you may contact Mexico’s
-            personal data protection authority.
-            <span class="todo"
-              >TODO: confirm the current authority (after INAI was dissolved, the Secretaría
-              Anticorrupción y Buen Gobierno).</span
-            >
+            personal data protection authority, currently the Secretaría Anticorrupción y Buen
+            Gobierno (Ministry of Anti-Corruption and Good Governance).
           </li>
         </ul>
 
         <h2 id="children">9. Children</h2>
         <p>
-          BolichApp is not directed to children under 13 and we do not knowingly collect their
-          data. If you are under 18, use the app with permission from a parent or guardian. If you
-          believe a child has sent us data, contact us and we will delete it.
-          <span class="todo">TODO: align with the target audience declared in Play Console.</span>
+          BolichApp is for bowlers aged 13 and over. It is not directed to children under 13 and we
+          do not knowingly collect their data. If you are under 18, use the app with permission from
+          a parent or guardian. If you believe a child has sent us data, contact us and we will
+          delete it.
         </p>
 
         <h2 id="changes">10. Changes to this policy</h2>
@@ -468,7 +422,7 @@
             <li><a href="mailto:marioacr94@gmail.com">marioacr94@gmail.com</a></li>
           </ul>
         </nav>
-        <p>© 2026 BolichApp · Developed by <span class="todo">TODO: developer name</span></p>
+        <p>© 2026 BolichApp · Developed by CarMaDev</p>
       </div>
     </footer>
   </body>
