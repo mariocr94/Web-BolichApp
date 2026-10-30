@@ -37,7 +37,7 @@
     <main id="contenido">
       <div class="wrap">
         <h1>Aviso de privacidad</h1>
-        <p class="meta">Última actualización: 7 de octubre de 2026 · Versión 1.3</p>
+        <p class="meta">Última actualización: 30 de octubre de 2026 · Versión 1.4</p>
 
         <section class="card focus" aria-labelledby="resumen">
           <h2 id="resumen">En resumen</h2>
@@ -60,6 +60,11 @@
               <strong>Reportes de errores:</strong> si la app falla, envía a Sentry un reporte
               técnico sin tus datos de boliche, tu nombre ni tu cuenta. Puedes desactivarlo en
               <span class="path">Ajustes → Privacidad</span>.
+            </li>
+            <li>
+              <strong>Versión web</strong> (<a href="https://app.bolichapp.com">app.bolichapp.com</a>):
+              tus datos se guardan en tu navegador, no envía reportes de errores y la sirve
+              Cloudflare (ver <a href="#web">sección 2.10</a>).
             </li>
             <li>
               No hay publicidad ni analítica de terceros, no usamos cookies y no vendemos tus datos.
@@ -87,6 +92,7 @@
                 <li><a href="#errores">Reportes de errores</a></li>
                 <li><a href="#no-hacemos">Lo que no hacemos</a></li>
                 <li><a href="#finalidades">Finalidades</a></li>
+                <li><a href="#web">Versión web</a></li>
               </ol>
             </li>
             <li><a href="#permisos">Permisos del teléfono</a></li>
@@ -323,7 +329,8 @@
         <h3 id="tecnicos">2.6 Datos técnicos de conexión</h3>
         <p>
           Cuando la app se conecta (inicio de sesión, sincronización, lectura de fotos, borrado de
-          cuenta o envío de un reporte de errores), nuestros proveedores reciben, como cualquier servicio en internet, tu dirección
+          cuenta, envío de un reporte de errores o, en la versión web, al cargar la app), nuestros
+          proveedores reciben, como cualquier servicio en internet, tu dirección
           IP y datos técnicos de la solicitud, que pueden quedar en sus registros de seguridad por
           un tiempo limitado. No los usamos para rastrearte.
         </p>
@@ -396,8 +403,8 @@
             No usamos analítica de terceros ni rastreamos tu actividad en otras apps o sitios.
           </li>
           <li>
-            No usamos cookies. Este sitio tampoco: no tiene cookies, JavaScript ni recursos de
-            terceros.
+            No usamos cookies, tampoco en la versión web. Este sitio (bolichapp.com) no tiene
+            cookies, JavaScript ni recursos de terceros.
           </li>
           <li>No vendemos ni rentamos tus datos, ni los compartimos para fines de terceros.</li>
           <li>
@@ -432,6 +439,43 @@
           No hay finalidades secundarias: no usamos tus datos para mercadotecnia, publicidad ni
           perfiles comerciales.
         </p>
+
+        <h3 id="web">2.10 Versión web (app.bolichapp.com)</h3>
+        <p>
+          BolichApp también funciona en el navegador, en
+          <a href="https://app.bolichapp.com">app.bolichapp.com</a>. Es la misma app y trata los
+          mismos datos que se describen arriba, con estas diferencias:
+        </p>
+        <ul>
+          <li>
+            <strong>Dónde se guardan tus datos:</strong> sin cuenta, en el almacenamiento de tu
+            navegador para ese sitio, en tu dispositivo; no salen de él. Si borras los datos del
+            sitio en tu navegador, se pierden. Safari puede borrarlos si pasas 7 días sin abrir el
+            sitio, salvo que lo agregues a tu pantalla de inicio. Usamos ese almacenamiento solo
+            para que la app funcione (tu base de datos, tus preferencias y, con cuenta, tu sesión);
+            no son cookies ni sirven para rastrearte.
+          </li>
+          <li>
+            <strong>Iniciar sesión con Google:</strong> la app te lleva a la página de Google y
+            Google te regresa a la app. Pedimos los mismos permisos básicos (<code>openid</code>,
+            <code>email</code> y <code>profile</code>) y tratamos los datos como se explica en las
+            secciones 2.2 a 2.4. En el navegador no hay una cuenta de Google del dispositivo: cerrar
+            sesión no la cierra en Google, y al borrar tu cuenta no podemos revocar el acceso
+            automáticamente; puedes quitar BolichApp en
+            <a href="https://myaccount.google.com/connections">las conexiones de tu cuenta de
+            Google</a>.
+          </li>
+          <li><strong>Reportes de errores:</strong> la versión web no envía reportes a Sentry.</li>
+          <li>
+            <strong>«Desde foto»</strong> no está disponible en la versión web por ahora.
+          </li>
+          <li>
+            <strong>Alojamiento:</strong> los archivos de la app web los sirve Cloudflare (ver
+            <a href="#proveedores">sección 4</a>), que recibe tu dirección IP y datos técnicos de
+            cada solicitud, como se explica en la <a href="#tecnicos">sección 2.6</a>. Tus datos
+            de boliche no pasan por Cloudflare.
+          </li>
+        </ul>
 
         <h2 id="permisos">3. Permisos del teléfono</h2>
         <ul>
@@ -475,6 +519,10 @@
             <strong>Google</strong> (Google LLC): inicio de sesión con Google. Además, Google Play
             distribuye la app y trata sus propios datos según su política de privacidad.
           </li>
+          <li>
+            <strong>Cloudflare</strong> (Cloudflare, Inc.): alojamiento y entrega de la versión
+            web. Red global con sede en Estados Unidos.
+          </li>
         </ul>
         <p>
           Estos proveedores operan fuera de México, en Canadá y Estados Unidos, por lo que tus datos
@@ -512,8 +560,9 @@
         <h2 id="conservacion">6. Cuánto tiempo conservamos tus datos</h2>
         <ul>
           <li>
-            <strong>Datos en tu teléfono:</strong> hasta que los borres, cierres sesión, desinstales
-            la app o uses «Borrar todos mis datos».
+            <strong>Datos en tu teléfono o navegador:</strong> hasta que los borres, cierres
+            sesión, desinstales la app, borres los datos del sitio en tu navegador o uses «Borrar
+            todos mis datos».
           </li>
           <li>
             <strong>Cuenta y copia sincronizada:</strong> hasta que borres tu cuenta desde la app o
@@ -546,8 +595,9 @@
 
         <h2 id="borrado">7. Cómo borrar tus datos</h2>
         <p>
-          En la app: <span class="path">Ajustes → Tus datos → Borrar todos mis datos</span>. Borra
-          lo que está en tu teléfono y, si iniciaste sesión, tu cuenta y tu copia en nuestro
+          En la app o en la versión web:
+          <span class="path">Ajustes → Tus datos → Borrar todos mis datos</span>. Borra lo que está
+          en tu teléfono o navegador y, si iniciaste sesión, tu cuenta y tu copia en nuestro
           servidor. Si ya no tienes la app, puedes pedirlo por correo. Los detalles (qué se borra,
           qué no y en cuánto tiempo) están en <a href="/borrar-cuenta/">Borrar tu cuenta</a>.
         </p>

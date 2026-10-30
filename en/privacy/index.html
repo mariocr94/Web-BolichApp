@@ -37,7 +37,7 @@
     <main id="content">
       <div class="wrap">
         <h1>Privacy Policy</h1>
-        <p class="meta">Last updated: October 7, 2026 · Version 1.3</p>
+        <p class="meta">Last updated: October 30, 2026 · Version 1.4</p>
         <p class="meta">
           The Spanish version (<a href="/privacidad/" hreflang="es-MX" lang="es-MX"
             >Aviso de privacidad</a
@@ -66,6 +66,11 @@
               without your bowling data, your name or your account. You can turn it off in
               <span class="path">Settings → Privacy</span>.
             </li>
+            <li>
+              <strong>Web version</strong> (<a href="https://app.bolichapp.com">app.bolichapp.com</a>):
+              your data is stored in your browser, it sends no error reports, and Cloudflare serves
+              it (see <a href="#web">section 2.10</a>).
+            </li>
             <li>No ads, no third-party analytics, no cookies, and we never sell your data.</li>
             <li>
               You can delete everything from the app:
@@ -90,6 +95,7 @@
                 <li><a href="#errors">Error reports</a></li>
                 <li><a href="#we-dont">What we don’t do</a></li>
                 <li><a href="#purposes">Purposes</a></li>
+                <li><a href="#web">Web version</a></li>
               </ol>
             </li>
             <li><a href="#permissions">Phone permissions</a></li>
@@ -390,8 +396,8 @@
           <li>We don’t use your data for targeted or personalized advertising.</li>
           <li>No third-party analytics and no tracking across other apps or websites.</li>
           <li>
-            No cookies. This website doesn’t use them either: no cookies, no JavaScript and no
-            third-party resources.
+            No cookies, on the web version either. This website (bolichapp.com) has no cookies,
+            no JavaScript and no third-party resources.
           </li>
           <li>We don’t sell or rent your data, or share it for third parties’ own purposes.</li>
           <li>We don’t give your data to data brokers or information resellers.</li>
@@ -418,6 +424,41 @@
           </li>
         </ul>
         <p>There are no secondary purposes: no marketing, advertising or commercial profiling.</p>
+
+        <h3 id="web">2.10 Web version (app.bolichapp.com)</h3>
+        <p>
+          BolichApp also runs in the browser, at
+          <a href="https://app.bolichapp.com">app.bolichapp.com</a>. It is the same app and handles
+          the same data described above, with these differences:
+        </p>
+        <ul>
+          <li>
+            <strong>Where your data is stored:</strong> without an account, in your browser’s
+            storage for that site, on your device; it never leaves it. If you clear the site’s data
+            in your browser, it is lost. Safari may delete it after 7 days without opening the site,
+            unless you add it to your home screen. We use that storage only to make the app work
+            (your database, your preferences and, with an account, your session); these are not
+            cookies and are not used to track you.
+          </li>
+          <li>
+            <strong>Signing in with Google:</strong> the app takes you to Google’s page and Google
+            brings you back to the app. We ask for the same basic permissions (<code>openid</code>,
+            <code>email</code> and <code>profile</code>) and handle the data as explained in sections
+            2.2 to 2.4. A browser has no device-level Google account: signing out does not sign you
+            out of Google, and deleting your account cannot revoke access automatically; you can
+            remove BolichApp from
+            <a href="https://myaccount.google.com/connections">your Google account’s
+            connections</a>.
+          </li>
+          <li><strong>Error reports:</strong> the web version does not send reports to Sentry.</li>
+          <li><strong>“From photo”</strong> is not available on the web version for now.</li>
+          <li>
+            <strong>Hosting:</strong> Cloudflare serves the web app’s files (see
+            <a href="#providers">section 4</a>) and receives your IP address and technical data of
+            each request, as explained in <a href="#technical">section 2.6</a>. Your bowling data
+            does not go through Cloudflare.
+          </li>
+        </ul>
 
         <h2 id="permissions">3. Phone permissions</h2>
         <ul>
@@ -459,6 +500,10 @@
             <strong>Google</strong> (Google LLC): Google sign-in. Google Play also distributes the
             app and handles its own data under its privacy policy.
           </li>
+          <li>
+            <strong>Cloudflare</strong> (Cloudflare, Inc.): hosting and delivery of the web version.
+            Global network, based in the United States.
+          </li>
         </ul>
         <p>
           These providers operate outside Mexico, in Canada and the United States, so your data may
@@ -495,8 +540,9 @@
         <h2 id="retention">6. How long we keep data</h2>
         <ul>
           <li>
-            <strong>Data on your phone:</strong> until you delete it, sign out, uninstall the app or
-            use “Delete all my data”.
+            <strong>Data on your phone or browser:</strong> until you delete it, sign out,
+            uninstall the app, clear the site’s data in your browser or use “Delete all my
+            data”.
           </li>
           <li>
             <strong>Account and synced copy:</strong> until you delete your account from the app or
@@ -522,8 +568,9 @@
 
         <h2 id="deletion">7. How to delete your data</h2>
         <p>
-          In the app: <span class="path">Settings → Your data → Delete all my data</span>. It
-          deletes what is on your phone and, if you signed in, your account and your copy on our
+          In the app or the web version:
+          <span class="path">Settings → Your data → Delete all my data</span>. It deletes what is on
+          your phone or browser and, if you signed in, your account and your copy on our
           server. If you no longer have the app, you can ask by email. Details (what is deleted,
           what is not, and how long it takes) are on
           <a href="/en/delete-account/">Delete your account</a>.
