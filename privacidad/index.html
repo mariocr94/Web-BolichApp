@@ -37,7 +37,7 @@
     <main id="contenido">
       <div class="wrap">
         <h1>Aviso de privacidad</h1>
-        <p class="meta">Última actualización: 30 de octubre de 2026 · Versión 1.4</p>
+        <p class="meta">Última actualización: 6 de noviembre de 2026 · Versión 1.5</p>
 
         <section class="card focus" aria-labelledby="resumen">
           <h2 id="resumen">En resumen</h2>
@@ -63,8 +63,8 @@
             </li>
             <li>
               <strong>Versión web</strong> (<a href="https://app.bolichapp.com">app.bolichapp.com</a>):
-              tus datos se guardan en tu navegador, no envía reportes de errores y la sirve
-              Cloudflare (ver <a href="#web">sección 2.10</a>).
+              tus datos se guardan en tu navegador, no envía reportes de errores, no guarda copias
+              de las fotos del marcador y la sirve Cloudflare (ver <a href="#web">sección 2.10</a>).
             </li>
             <li>
               No hay publicidad ni analítica de terceros, no usamos cookies y no vendemos tus datos.
@@ -142,8 +142,10 @@
           </li>
           <li>
             <strong>Juego:</strong> boliches, ligas (nombre, temporada, día de juego, fechas, boliche
-            y líneas por sesión), sesiones (fecha, pistas, patrón de aceite, tipo, liga y notas), líneas,
-            tiros por frame, la bola de cada tiro, pinos que quedaron de pie, velocidad y hándicap.
+            y líneas por sesión), sesiones (fecha, pistas, patrón de aceite, tipo, liga, hándicap y
+            notas), líneas (incluida la pista en que empezaste), tiros por frame, la bola de cada
+            tiro, pinos que quedaron de pie, velocidad y hándicap y, si la activas, tu línea de
+            juego en cada tiro (duelas de pies, blanco, flechas y breakpoint).
           </li>
           <li>
             <strong>Fotos del marcador:</strong> solo si activas «Guardar la foto con la línea»; se
@@ -467,7 +469,11 @@
           </li>
           <li><strong>Reportes de errores:</strong> la versión web no envía reportes a Sentry.</li>
           <li>
-            <strong>«Desde foto»</strong> no está disponible en la versión web por ahora.
+            <strong>«Desde foto»:</strong> funciona como se explica en la
+            <a href="#fotos">sección 2.5</a>. Eliges la foto con el selector de archivos de tu
+            navegador (en el celular, también con la cámara); la app solo recibe la foto que
+            eliges. Tu navegador la reduce y le quita los metadatos antes de enviarla, y la versión
+            web nunca guarda una copia de la foto con la línea.
           </li>
           <li>
             <strong>Alojamiento:</strong> los archivos de la app web los sirve Cloudflare (ver

@@ -37,7 +37,7 @@
     <main id="content">
       <div class="wrap">
         <h1>Privacy Policy</h1>
-        <p class="meta">Last updated: October 30, 2026 · Version 1.4</p>
+        <p class="meta">Last updated: November 6, 2026 · Version 1.5</p>
         <p class="meta">
           The Spanish version (<a href="/privacidad/" hreflang="es-MX" lang="es-MX"
             >Aviso de privacidad</a
@@ -68,8 +68,8 @@
             </li>
             <li>
               <strong>Web version</strong> (<a href="https://app.bolichapp.com">app.bolichapp.com</a>):
-              your data is stored in your browser, it sends no error reports, and Cloudflare serves
-              it (see <a href="#web">section 2.10</a>).
+              your data is stored in your browser, it sends no error reports, it keeps no copies
+              of scoreboard photos, and Cloudflare serves it (see <a href="#web">section 2.10</a>).
             </li>
             <li>No ads, no third-party analytics, no cookies, and we never sell your data.</li>
             <li>
@@ -143,8 +143,10 @@
           </li>
           <li>
             <strong>Games:</strong> bowling centers, leagues (name, season, league night, dates,
-            center and games per session), sessions (date, lanes, oil pattern, type, league and notes), games, rolls
-            per frame, the ball used on each roll, pins left standing, speed and handicap.
+            center and games per session), sessions (date, lanes, oil pattern, type, league,
+            handicap and notes), games (including the lane you started on), rolls per frame, the
+            ball used on each roll, pins left standing, speed and handicap and, if you turn it on,
+            your line of play on each shot (feet, target, arrows and breakpoint boards).
           </li>
           <li>
             <strong>Scoreboard photos:</strong> only if you turn on “Keep the photo with the game”;
@@ -451,7 +453,13 @@
             connections</a>.
           </li>
           <li><strong>Error reports:</strong> the web version does not send reports to Sentry.</li>
-          <li><strong>“From photo”</strong> is not available on the web version for now.</li>
+          <li>
+            <strong>“From photo”:</strong> works as explained in <a href="#photos">section 2.5</a>.
+            You pick the photo with your browser’s file picker (on a phone, also with the camera);
+            the app only receives the photo you choose. Your browser shrinks it and strips its
+            metadata before sending it, and the web version never keeps a copy of the photo with
+            the game.
+          </li>
           <li>
             <strong>Hosting:</strong> Cloudflare serves the web app’s files (see
             <a href="#providers">section 4</a>) and receives your IP address and technical data of
